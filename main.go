@@ -28,7 +28,7 @@ func action(c *cli.Context) error {
 	go timeOut(ip)
 	r := <-ip
 	if r == "timeout" {
-		em := "You cannot get global ip address."
+		em := "Getting global ip address is timeout."
 		fmt.Println(em)
 		return errors.New(em)
 	}
